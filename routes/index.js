@@ -17,7 +17,10 @@ router.post('/', function (req, res, next) {
   var password = req.body.password;
   var checkUser = usersModule.findOne({ email: email });
   checkUser.exec((error, data) => {
-    if (error) throw error
+    if (error) {
+    res.redirect("/")
+    }
+    else{
     var getPassword = data.password;
     var UserID = data._id;
     var username = data.username;
@@ -31,7 +34,7 @@ router.post('/', function (req, res, next) {
     }
     else
       res.render('login', { title: 'Password Management System', msg: "Invalid Password" });
-
+    }
   });
 });
 
