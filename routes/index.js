@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
     res.redirect('./dashboard');
   }
   else {
-    res.render('login', { title: 'Welcome to Password Management System', msg: "" })
+    res.render('login', { title: 'Password Management System', msg: "" })
   }
 });
 
