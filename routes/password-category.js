@@ -68,13 +68,14 @@ router.post('/edit', checkLogin,
 router.get('/delete/:id', checkLogin, function (req, res, next) {
     var loginUser = req.session.userName;
     var passcatid = req.params.id;
+    var image = req.session.userIMG;
     var deletecat = passCatModel.findByIdAndDelete(passcatid);
     deletecat.exec(function (err) {
         if (err) throw err;
     });
     passCatModel.find({ user_id: req.session.userID }).exec(function (err, data) {
         if (err) throw err;
-        res.render('password_category', { title: 'Password Management System', records: data, loginUser: loginUser, success: "Deleted successfully" });
+        res.render('password_category', { title: 'Password Management System', records: data, loginUser: loginUser,image:image, success: "Deleted successfully" });
     })
 });
 
