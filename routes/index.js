@@ -17,7 +17,7 @@ router.post('/', function (req, res, next) {
   var password = req.body.password;
   var checkUser = usersModule.findOne({ email: email });
   checkUser.exec((error, data) => {
-    if (error) {
+    if (!data) {
     res.redirect("/")
     }
     else{
