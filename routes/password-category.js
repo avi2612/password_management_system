@@ -59,7 +59,7 @@ router.post('/edit', checkLogin,
         })
         passCatModel.find({ user_id: req.session.userID }).exec(function (err, data) {
 
-            res.redirect('/password_category');
+            res.redirect('/password-category');
         })
     });
 
