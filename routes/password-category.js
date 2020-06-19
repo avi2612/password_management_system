@@ -42,7 +42,7 @@ router.get('/edit/:id', checkLogin, function (req, res, next) {
     })
     passCatModel.find({ user_id: req.session.userID }).exec(function (err, data) {
         if (err) throw err;
-        res.render('/password-category', { title: 'Password Management System',         image:image
+        res.render('password_category', { title: 'Password Management System',         image:image
 ,        records: data, loginUser: loginUser, success: "" });
     })
 });
