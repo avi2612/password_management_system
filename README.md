@@ -1,6 +1,6 @@
 WorkFlow of this project
 
-Jenkins  =>  GitHub Poll SCM  =>  Build Docker Image  => Ansible  =>  Push Code to Docker Container
+Jenkins  =>  GitHub Poll SCM  =>  Build Docker Image  => Ansible  =>  Deploy Code to Docker Container
 
 To check its CI-CD feature you can edit this file and test the project.
 https://github.com/geekyavinash/password_management_system/blob/master/views/login.ejs
