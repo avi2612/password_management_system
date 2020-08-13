@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 //npm install mongoose-pagination
 var mongoosePaginate = require('mongoose-paginate');
 
-mongoose.connect('mongodb+srv://avinash:avinash@mongodb-atlas-pytsg.mongodb.net/pms', { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
+mongoose.connect(' Jenkins is handeling authentication to MongoDB ', { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 
 var conn = mongoose.Collection;
 var passSchema = new mongoose.Schema({
