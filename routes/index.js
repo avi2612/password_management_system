@@ -18,7 +18,7 @@ router.post('/', function (req, res, next) {
   var checkUser = usersModule.findOne({ email: email });
   checkUser.exec((error, data) => {
     if (!data) {
-     res.render('login', { title: 'Our Password Management System', msg: "Invalid Email Account" });
+     res.render('login', { title: 'Password Management System', msg: "Invalid Email Account" });
     }
     else{
     var getPassword = data.password;
