@@ -7,4 +7,4 @@ https://github.com/avising/password_management_system/blob/master/views/login.ej
 
 Currently Working on
 - adding redis for cache and session storing
-- deploying project on docker swarm
+- deploying project on kubernetes cluster
